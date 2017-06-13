@@ -1,0 +1,837 @@
+/*
+* @Author: iceStone
+* @Date:   2015-12-05 21:48:40
+* @Last Modified by:   iceStone
+* @Last Modified time: 2015-12-11 18:51:09
+*/
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+
+/**
+ * Bootstrap 扩展
+ */
+
+.navbar-itcast {
+  background-color: #fff;
+  border-bottom-color: #f0f0f0;
+  margin-bottom: 0;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+.navbar-itcast .navbar-brand {
+  height: 70px;
+  padding: 10px 15px;
+}
+
+.navbar-itcast .navbar-brand:hover,
+.navbar-itcast .navbar-brand:focus {
+  color: #5e5e5e;
+  background-color: transparent;
+}
+
+.navbar-itcast .navbar-text {
+  color: #777;
+}
+
+.navbar-itcast .navbar-nav > li > a {
+  color: #878787;
+  font-size: 1.4rem;
+  line-height: 38px;
+}
+
+
+/*@media screen and (min-width: 992px) {
+  .navbar-itcast .navbar-nav > li > a {
+    font-size: 1.6rem;
+  }
+}*/
+
+.navbar-itcast .navbar-nav > li > a:hover,
+.navbar-itcast .navbar-nav > li > a:focus {
+  color: #424242;
+  background-color: transparent;
+  border-bottom: 2px solid #e9232c;
+}
+
+.navbar-itcast .navbar-nav > .active > a,
+.navbar-itcast .navbar-nav > .active > a:hover,
+.navbar-itcast .navbar-nav > .active > a:focus {
+  color: #424242;
+  background-color: #fff;
+  border-bottom: 2px solid #e9232c;
+}
+
+.navbar-itcast .navbar-nav > .disabled > a,
+.navbar-itcast .navbar-nav > .disabled > a:hover,
+.navbar-itcast .navbar-nav > .disabled > a:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.navbar-itcast .navbar-toggle {
+  border-color: #ddd;
+  margin-top: 18px;
+  margin-bottom: 18px;
+}
+
+.navbar-itcast .navbar-toggle:hover,
+.navbar-itcast .navbar-toggle:focus {
+  background-color: #ddd;
+}
+
+.navbar-itcast .navbar-toggle .icon-bar {
+  background-color: #888;
+}
+
+.navbar-itcast .navbar-collapse,
+.navbar-itcast .navbar-form {
+  border-color: #e7e7e7;
+}
+
+.navbar-itcast .navbar-nav > .open > a,
+.navbar-itcast .navbar-nav > .open > a:hover,
+.navbar-itcast .navbar-nav > .open > a:focus {
+  color: #555;
+  background-color: #e7e7e7;
+}
+
+@media (max-width: 767px) {
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a {
+    color: #777;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #333;
+    background-color: transparent;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-itcast .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+  }
+}
+
+.navbar-itcast .navbar-link {
+  color: #777;
+}
+
+.navbar-itcast .navbar-link:hover {
+  color: #333;
+}
+
+.navbar-itcast .btn-link {
+  color: #777;
+}
+
+.navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link:focus {
+  color: #333;
+}
+
+.navbar-itcast .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcast .btn-link:hover,
+.navbar-itcast .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcast .btn-link:focus {
+  color: #ccc;
+}
+
+.btn-register {
+  color: #FFFFFF;
+  background-color: #E9232C;
+  border-color: #DB3B43;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  color: #FFFFFF;
+  background-color: #E9232C;
+  border-color: #DB3B43;
+}
+
+.btn-register:active,
+.btn-register.active,
+.open .dropdown-toggle.btn-register {
+  background-image: none;
+}
+
+.btn-register.disabled,
+.btn-register[disabled],
+fieldset[disabled] .btn-register,
+.btn-register.disabled:hover,
+.btn-register[disabled]:hover,
+fieldset[disabled] .btn-register:hover,
+.btn-register.disabled:focus,
+.btn-register[disabled]:focus,
+fieldset[disabled] .btn-register:focus,
+.btn-register.disabled:active,
+.btn-register[disabled]:active,
+fieldset[disabled] .btn-register:active,
+.btn-register.disabled.active,
+.btn-register[disabled].active,
+fieldset[disabled] .btn-register.active {
+  background-color: #E9232C;
+  border-color: #DB3B43;
+}
+
+.btn-register .badge {
+  color: #E9232C;
+  background-color: #FFFFFF;
+}
+
+
+/**
+ * 字体图标
+ */
+
+@font-face {
+  font-family: 'weijinsuo';
+  src: url('../fonts/MiFie-Web-Font.eot?6cyhth');
+  src: url('../fonts/MiFie-Web-Font.eot?6cyhth#iefix') format('embedded-opentype'), url('../fonts/MiFie-Web-Font.svg?6cyhth#MiFie-Web-Font') format('svg'), url('../fonts/MiFie-Web-Font.ttf?6cyhth') format('truetype'), url('../fonts/MiFie-Web-Font.woff?6cyhth') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'weijinsuo' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon {
+  color: #E9232C;
+  display: inline-block;
+  font-size: 50px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.icon-icon::before {
+  content: "\e920";
+}
+
+.icon-logo {
+  color: #434243;
+  display: inline-block;
+  font-size: 36px;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.icon-logo::before {
+  content: "\e93e";
+}
+
+.icon-mobilephone:before {
+  content: "\e908";
+  font-size: 13px;
+}
+
+.icon-telephone:before {
+  content: "\e909";
+  font-size: 15px;
+}
+
+.icon-uniE900:before {
+  content: "\e900";
+}
+
+.icon-uniE901:before {
+  content: "\e901";
+}
+
+.icon-uniE902:before {
+  content: "\e902";
+}
+
+.icon-uniE903:before {
+  content: "\e903";
+}
+
+.icon-uniE904:before {
+  content: "\e904";
+}
+
+.icon-uniE905:before {
+  content: "\e905";
+}
+
+.icon-uniE906:before {
+  content: "\e906";
+}
+
+.icon-uniE907:before {
+  content: "\e907";
+}
+
+.icon-news01:before {
+  content: "\e90e";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news02:before {
+  content: "\e90f";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news03:before {
+  content: "\e910";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+.icon-news04:before {
+  content: "\e911";
+  font-size: 28px;
+  color: #EAEAEA;
+}
+
+
+/**
+ * 通栏样式
+ */
+
+.topbar {
+  border-bottom: 1px solid #e0e0e0;
+  line-height: 40px;
+}
+
+.topbar {
+  font-size: 10px;
+}
+
+.topbar .tb-1 > a {
+  text-decoration: none;
+  position: relative;
+  z-index: 999;
+}
+
+.topbar .tb-1 > a > img {
+  display: none;
+}
+
+.topbar .tb-1:hover > a > img {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  /*top: 14px;*/
+  left: 0;
+}
+
+.topbar .tb-4 > .text-muted {
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.topbar .row > div + div {
+  border-left: 1px solid #e0e0e0;
+}
+
+
+/**
+ * 轮播通栏
+ */
+
+#home_slide .item-image {
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+#home_slide .item-image img {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  #home_slide .item-image {
+    height: 410px;
+  }
+  #home_slide .item-image img {
+    display: none;
+  }
+}
+
+
+/**
+ * 网站特色模块
+ */
+
+#features {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#features a {
+  color: #333;
+  text-decoration: none;
+}
+
+#features a:hover {
+  color: #E9232C;
+}
+
+#features .media {
+  padding: 10px 0;
+}
+
+#features a i {
+  display: block;
+  font-size: 30px;
+  padding: 10px 0;
+}
+
+#features a .media-body {
+  padding: 5px 0;
+}
+
+
+/**
+ * 预约
+ */
+
+#booking {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#booking > .container {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#booking > .container > p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+#booking > .container > p > span {
+  color: #e9232c;
+}
+
+#booking > .container > p i {
+  font-size: 20px;
+}
+
+#booking > .container > p > a:hover {
+  text-decoration: none;
+}
+
+#booking > .container > p > .just-now {
+  color: #e9232c;
+  border-bottom: 1px dashed #e9232c;
+}
+
+#booking > .container > p > .quick-learn {
+  color: #333;
+}
+
+
+/**
+ * 产品列表
+ */
+
+#products {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+}
+
+#products .nav-tabs {
+  border-bottom: 1px solid #c0c0c0;
+  padding-left: 20px;
+}
+
+#products .nav-tabs li a {
+  color: #444;
+  font-size: 16px;
+}
+
+#products .nav-tabs .active a {
+  border: none;
+  background-color: transparent;
+  border-bottom: 4px solid #e9232c;
+}
+
+.touch-scroll {}
+
+#products .tab-content {}
+
+#products .tab-content .tab-pane {
+  margin-top: 20px;
+}
+
+.panel-product {
+  border-color: #fff;
+  border-radius: 0;
+  padding: 0;
+  background-color: #fff;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 5px #c0c0c0;
+  color: #555;
+}
+
+.panel-product.active {
+  background-color: #e9232c;
+  border-color: #e9232c;
+  color: #fff;
+  position: relative;
+}
+
+.panel-product.active::before {
+  content: "\e915";
+  position: absolute;
+  font-family: weijinsuo;
+  color: #fff;
+  font-size: 33px;
+  font-weight: 100;
+  top: -8px;
+  left: -1px;
+}
+
+.panel-product.state-1,
+.panel-product.state-2,
+.panel-product.state-3,
+.panel-product.state-4 {
+  background-color: #e0e0e0;
+}
+
+.panel-product.state-1::after,
+.panel-product.state-2::after,
+.panel-product.state-3::after,
+.panel-product.state-4::after {
+  font-family: weijinsuo;
+  font-size: 100px;
+  color: #e9232c;
+  position: absolute;
+  top: 10px;
+  right: 130px;
+}
+
+.panel-product.state-1::after {
+  content: "\e925";
+}
+
+.panel-product.state-2::after {
+  content: "\e926";
+}
+
+.panel-product.state-3::after {
+  content: "\e927";
+}
+
+.panel-product.state-4::after {
+  content: "\e928";
+}
+
+.panel-product .panel-heading {
+  height: 150px;
+  float: right;
+  width: 120px;
+  padding: 45px 0 35px;
+  text-align: center;
+  border-left: 1px dashed #c0c0c0;
+  position: relative;
+}
+
+.panel-product .panel-heading .tooltips {
+  width: 100%;
+  height: 18px;
+  top: 20px;
+  position: absolute;
+}
+
+.panel-product .panel-heading .tooltips span {
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  padding: 2px;
+}
+
+.panel-product .panel-heading .tooltips span.primary {
+  border-color: #e9232c;
+  color: #e9232c;
+}
+
+.panel-product .panel-heading .tooltips span.secondary {
+  border-color: #399;
+  color: #399;
+}
+
+.panel-product .panel-heading .tooltips span.tertiary {
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.panel-product .panel-heading strong {
+  color: #e9232c;
+  font-size: 36px
+}
+
+.panel-product.active .panel-heading strong,
+.panel-product.active .panel-heading sub {
+  color: #fff;
+}
+
+.panel-product .panel-heading::before {
+  background-color: #f0f0f0;
+  border-radius: 7px;
+  content: ' ';
+  display: block;
+  height: 14px;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 14px;
+}
+
+.panel-product .panel-heading::after {
+  background-color: #f0f0f0;
+  border-radius: 7px;
+  content: ' ';
+  display: block;
+  height: 14px;
+  position: absolute;
+  bottom: -7px;
+  left: -7px;
+  width: 14px;
+  box-shadow: 0 2px 2px #c0c0c0 inset;
+}
+
+.panel-product .panel-heading sub {
+  color: #e9232c;
+}
+
+.panel-product .panel-heading span {
+  font-size: 10px
+}
+
+.panel-product .panel-body {
+  height: 150px;
+  margin-right: 120px;
+}
+
+.panel-product .panel-body h5 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.panel-product .panel-body dt {
+  font-size: 10px;
+  color: #c0c0c0;
+}
+
+.panel-product .panel-body dd {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+
+/**
+ * 新闻板块
+ */
+
+#news {
+  padding: 50px 0;
+  border-bottom: 1px solid #c0c0c0;
+}
+
+#news .news-title {
+  font-size: 20px;
+  border-bottom: 1px dashed #c0c0c0;
+  text-align: center;
+  position: relative;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+}
+
+#news .news-title::after {
+  content: ' ';
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1px solid #c0c0c0;
+  position: absolute;
+  right: -7px;
+  bottom: -5px;
+}
+
+#news .line {
+  height: 100%;
+  border-left: 1px dashed #c0c0c0;
+  position: absolute;
+  top: 0;
+  left: 55%;
+  z-index: -1;
+}
+
+#news .nav-pills > li > a {
+  background-color: #f5f5f5;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#news .nav-pills > li > a:hover,
+#news .nav-pills > li.active > a,
+#news .nav-pills > li.active > a:hover,
+#news .nav-pills > li.active > a:focus {
+  background-color: #e9232c;
+}
+
+#news .tab-pane ul {
+  list-style: none;
+  font-size: 14px;
+  line-height: 3;
+  padding: 0;
+}
+
+#news .nav-stacked > li {
+  float: left;
+}
+
+@media screen and (min-width: 970) {
+  #news .nav-stacked > li {
+    float: none;
+  }
+}
+
+
+/**
+ * 合作伙伴
+ */
+
+#partner {
+  padding: 50px 0;
+}
+
+.partner-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0;
+}
+
+.partner-list > li {
+  display: inline-block;
+  width: calc(100% / 9);
+  font-size: 50px;
+  line-height: 1;
+}
+
+.partner-list > li + li {
+  border-left: 1px dashed #c0c0c0;
+  color: #ddd;
+}
+
+.partner-list > li > a {
+  color: #999;
+}
+
+.partner-list > li > a:hover {
+  text-decoration: none;
+}
+
+.icon-uniE930:hover {
+  color: #df3232;
+}
+
+.icon-uniE930:before {
+  content: "\e946";
+}
+
+.icon-uniE92F:hover {
+  color: #e8380d;
+}
+
+.icon-uniE92F:before {
+  content: "\e92f";
+}
+
+.icon-uniE92E:hover {
+  color: #ed6f00;
+}
+
+.icon-uniE92E:before {
+  content: "\e92e";
+}
+
+.icon-uniE92A:hover {
+  color: #159f69;
+}
+
+.icon-uniE92A:before {
+  content: "\e92a";
+}
+
+.icon-uniE929:hover {
+  color: #07569e;
+}
+
+.icon-uniE929:before {
+  content: "\e929";
+}
+
+.icon-uniE931:hover {
+  color: #004098;
+}
+
+.icon-uniE931:before {
+  content: "\e931";
+}
+
+.icon-uniE92C:hover {
+  color: #d32019;
+}
+
+.icon-uniE92C:before {
+  content: "\e92c";
+}
+
+.icon-uniE92B:hover {
+  color: #3eac4a;
+}
+
+.icon-uniE92B:before {
+  content: "\e92b";
+}
+
+.icon-uniE92D:hover {
+  color: #2bb289;
+}
+
+.icon-uniE92D:before {
+  content: "\e92d";
+}
